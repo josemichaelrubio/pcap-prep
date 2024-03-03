@@ -5,17 +5,18 @@
 # Python uses the current time as the default seed.
 
 import random
-
-# To know for PCAP:
-#   random.random() - returns a random float number between 0 and 1
-#   random.seed(x) - changes the default seed
-#   random.choice(seq) - returns a random element from the non-empty sequence.
-#       The sequence can be a list, a tuple, or a string
-#       doesn't care about duplicates
-#   random.sample(population, k) - returns a new list with k elements from the population
-#       takes two arguments: sequence and the number of elements to be chosen
-#       elements will always be unique
-#       If k is larger than the population, a ValueError is raised
+"""
+ To know for PCAP:
+   random.random() - returns a random float number between 0 and 1
+   random.seed(x) - changes the default seed
+   random.choice(seq) - returns a random element from the non-empty sequence.
+       The sequence can be a list, a tuple, or a string
+       doesn't care about duplicates
+   random.sample(population, k) - returns a new list with k elements from the population
+       takes two arguments: sequence and the number of elements to be chosen
+       elements will always be unique
+       If k is larger than the population, a ValueError is raised
+"""
 
 # random()
 # produces a float number between 0 and 1
