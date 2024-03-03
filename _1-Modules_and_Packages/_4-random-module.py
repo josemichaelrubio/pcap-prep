@@ -16,6 +16,7 @@ import random
        takes two arguments: sequence and the number of elements to be chosen
        elements will always be unique
        If k is larger than the population, a ValueError is raised
+       It picks elements with unique indexes but doesn't verify whether elements at these indexes are unique
 """
 
 # random()
