@@ -9,3 +9,11 @@ Y
 ._1-Modules_and_Packages/_1-intro_to_modules.py,6/1/611f3e50104c61c6b331b037e6a580e640321e21
 ]
 -_1-Modules_and_Packages/_5-platform_module.py,c/8/c8e4b85179117a98be091cb477de26cce568ebc0
+^
+._1-Modules_and_Packages/_6-creating_modules.py,a/5/a5bda5b38a0184dfc332bdb6af4b617674d9780f
+e
+5_1-Modules_and_Packages/_6-modules_own_module/main.py,2/6/26fcfb520fd6ffd2506d9d34c0b27b15a671662e
+h
+8_1-Modules_and_Packages/_6-modules_own_module/_6-main.py,5/2/527ffd5c15606d7de5e4f3b77242a2b5a9f0e646
+k
+;_1-Modules_and_Packages/_6-modules_own_module/own_module.py,a/b/ab87ecd058ad281c36b06de65e69c9dfbe4ac245
