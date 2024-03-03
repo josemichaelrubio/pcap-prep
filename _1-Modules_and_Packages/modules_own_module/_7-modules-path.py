@@ -19,8 +19,6 @@ sys.path.append("secret")
 # adds at a place of the list you want
 sys.path.insert(0, "secret")
 
-import secret
-
 # prints all the paths where Python looks for modules
 print(sys.path)
 
