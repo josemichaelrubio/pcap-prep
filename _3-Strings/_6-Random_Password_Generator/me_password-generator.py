@@ -16,7 +16,7 @@ def interact_main_menu():
             include_upper = input('Use uppercase letters? (y/n): ').lower().strip() == 'y'
             include_digits = input('Use digits? (y/n): ').lower().strip() == 'y'
             include_special = input('Use special characters? (y/n): ').lower().strip() == 'y'
-            print('\nGenerated password:', generate_password(length, include_upper, include_digits, include_special))
+            print('\nGenerated password:', generate_password(length, include_upper, include_digits, include_special), '\n')
             break
         elif user_choice == '2':
             print('Bye!')
