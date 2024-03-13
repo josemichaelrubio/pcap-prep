@@ -46,9 +46,10 @@ print('ilovetravelingaroundtheworld'.rfind('a', 10, 20))
 
 #* isalnum()
 # isalnum() - returns True if all the characters are alphanumeric, meaning alphabet letter (a-z) and numbers (0-9).
-print('ilovetravelingaroundtheworld'.isalnum())
-print('ilovetravelingaroundtheworld123'.isalnum())
-print('ilovetravelingaroundtheworld123!'.isalnum())
+print('ilovetravelingaroundtheworld'.isalnum()) # True
+print('i love traveling around the world'.isalnum()) # False
+print('ilovetravelingaroundtheworld123'.isalnum()) # True
+print('ilovetravelingaroundtheworld123!'.isalnum()) # False
 
 #* isalpha()
 # isalpha() - returns True if all the characters are alphabet letters (a-z).

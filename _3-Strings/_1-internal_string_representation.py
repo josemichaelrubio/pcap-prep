@@ -15,6 +15,8 @@ Code Page= standard for using the remaining 128 code points for ASCII to store s
 	• All code pages share the first 128 ASCII characters
 	• The other 128 ASCII characters can be different depending on language
 
+Code Point = a number that represents a character in a code page
+
 i18n = internationalization - the concept of finding a solution to a problem with multiple alphabets for multiple languages
 
 Unicode= universal character encoding

@@ -1,3 +1,14 @@
+"""
+Comparing Strings
+-----------------
+Comparing numbers:
+	• ==
+	• !=
+	• >
+	• >=
+	• <
+	• <=
+"""
 
 # Two strings are equal if and only if they are identical, case sensitive. 
 print('Python' == 'Python')  # True
