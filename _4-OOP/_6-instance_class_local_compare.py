@@ -2,8 +2,6 @@
 Comparison: Instance, Class, & Local variables
 ------------------------------------------------
 *instance variable overrides the class variable with the same name
-local variables are only visible within the block they are created
-	• Trying to call a variable outside of its block will result in a NameError
 
 General:
 	• Class Variables
