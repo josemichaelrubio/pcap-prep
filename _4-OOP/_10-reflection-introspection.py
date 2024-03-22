@@ -1,5 +1,5 @@
 """
-Reflection and Introspection
+* Reflection and Introspection
 ---------------------------
 Introspection = ability of a program to check the type of an object or its properties at runtime
 	• Allows you to get info about a given object during program execution
