@@ -16,7 +16,6 @@ class Vechile:
 
 # `class Subclass(Superclass):` is the syntax for inheritance
 class LandVechile(Vechile):
-
     pass
 
 # Car is a subclass of landVechile and landVechile is a subclass of Vechile
@@ -24,8 +23,8 @@ class Car(LandVechile):
     pass
 
 # issubclass() function is used to check if a class is a subclass of another class
-print(issubclass(Car, Vechile)) # True
+print(issubclass(Car, Vechile))
 # subclasses of a subclass is also subclasses of the superclass
-print(issubclass(LandVechile, Vechile)) # True
+print(issubclass(LandVechile, Vechile))
 # a class is a subclass of itself
-print(issubclass(Car, Car)) # True
+print(issubclass(Car, Car)) 
