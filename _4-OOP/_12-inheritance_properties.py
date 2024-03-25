@@ -1,6 +1,19 @@
 """
-
-
+* Inheriting Properties
+*=======================
+An error will not throw if a constructor is missing from the class definition. Just an empty object 
+	• {}
+If we don't define a constructor explicitly, Python will try to look for a constructor in the super classes.
+	• subclasses inherit constructors of their superclass if not explicitly defined in the subclass definition
+	• If a subclass explicitly defines a constructor when its superclass has a constructor, the constructor from the subclass takes precedence 
+		○ If that subclass is also a superclass of a subclass that doesn't have a constructor, it's subclass inherits the constructor.
+		○ To invoke the constructor from the superclass, we use dot notation with name of superclass or super()
+			§ Super_Class.__init__(self, parameter)
+			§ super().__init__(parameter)
+				□ NOTE: the self is omitted. 
+			§ This allows for instance variables to be inherited from super classes outside the subclass definition.
+				□ Use dot notation
+Subclasses inherit all the properties and methods of their superclass(es)
 """
 
 #* A Class with no constructor
