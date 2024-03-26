@@ -1,7 +1,11 @@
 """
 * Inheritance: Intro
 ---------------------
-Inheritance = when one object or class is based on another object or class
+OPP principles:
+	• Encapsulation
+	• Abstraction
+	• Polymorphism = the ability of classes to take different forms
+	*• Inheritance = when one object or class is based on another object or class
 Super classes contain subclasses.
 `pass` = a placeholder since Python throws an error for empty blocks
 `issubclass(subclass, superclass)` = check if a subclass is a subclass for a superclass
