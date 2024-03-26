@@ -37,7 +37,7 @@ class Flyable():
 class Airplane(Vehicle, Flyable):
     pass
 
-my_plane = AirPlane()
+my_plane = Airplane()
 my_plane.go()
 my_plane.fly()
 #* Method Resolution Order (MRO)
