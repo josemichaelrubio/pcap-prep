@@ -26,7 +26,9 @@ except ValueError:
     # What to do if the error occurs
     print("Invalid input. Please enter a number.")
 except ZeroDivisionError:
+    # Second exception block
     print("Cannot divide by zero.")
 except:
+    # Default exception
     print("An unknown error occurred.")
 
