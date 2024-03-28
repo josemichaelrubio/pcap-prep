@@ -20,6 +20,8 @@ Lambda functions are also called:
 	• Functions without names
 	• Anonymous Functions
 """
+
+# Lambda function
 lambda a, b: a + b
 
 # Typical function
@@ -28,7 +30,7 @@ def add(a, b):
 
 print(add(2, 3))
 
-#* Lambda function
+# Lambda function saved in a variable
 add = lambda a, b: a + b
 print(add(2, 3))
 
@@ -43,4 +45,3 @@ apply_func([1, 2, 3], func)
 
 # Using a lambda function directly
 apply_func([1, 2, 3], lambda x: x**2)
-# NOTE: lambda is not saved anywhere here, thus it is lost and cannot be reused later on
