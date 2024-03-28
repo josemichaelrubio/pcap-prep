@@ -33,3 +33,12 @@ if user_name == "":
     sys.exit()
 print("Hello", user_name)
 print("How are you today?")
+
+# How to get all the subclasses of a class, in this case, BaseException
+for subclass in BaseException.__subclasses__():
+	print(subclass.__name__)
+
+# How to get all the subclasses of a class, in this case, Exception
+for subclass in Exception.__subclasses__():
+	print(subclass.__name__)
+	
