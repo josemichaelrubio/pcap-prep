@@ -43,3 +43,4 @@ alt_zeros_and_ones_with_total_100 = [0 if i % 2 == 0 else 1 for i in range(100)]
 #* nested list comprehension
 table = [[i for i in range(1,6)] for j in range(5)] # 
 print(table)
+# 
