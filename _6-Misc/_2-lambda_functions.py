@@ -19,7 +19,6 @@ Lambda can be saved in a variable or used directly
 Lambda functions are also called:
 	• Functions without names
 	• Anonymous Functions
-//==================================================================================================
 """
 lambda a, b: a + b
 
