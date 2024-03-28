@@ -21,10 +21,9 @@ Lambda functions are also called:
 	• Anonymous Functions
 //==================================================================================================
 """
-
 lambda a, b: a + b
 
-#* Typical function
+# Typical function
 def add(a, b):
     return a + b
 
@@ -34,7 +33,7 @@ print(add(2, 3))
 add = lambda a, b: a + b
 print(add(2, 3))
 
-#* Lambda function as a parameter
+# Lambda function as a parameter
 def apply_func(x, func):
     for elem in x:
         print(func(elem))
