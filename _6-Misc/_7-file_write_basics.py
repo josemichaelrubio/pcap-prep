@@ -13,6 +13,7 @@ what’s different is how we open the file
 Closing the stream is the same
 
 write()
+NOTE: you can pass strings as arguments to the write() method
 """
 
 # w mode will create a new file if it doesn't exist
