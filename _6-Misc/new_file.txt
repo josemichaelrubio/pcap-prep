@@ -1,0 +1,3 @@
+Hello again!
+We are writing on an existing file
+This will delete the content that was previously written here and replace it with this!
