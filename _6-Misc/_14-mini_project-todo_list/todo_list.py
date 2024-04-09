@@ -22,6 +22,7 @@ class todo_list:
             elif choice == '2':
                 self.add_task()
             elif choice == '3':
+                #self.show_tasks()
                 self.complete_task()
             elif choice == '4':
                 self.exit()
@@ -69,6 +70,8 @@ class todo_list:
         def get_last_id(filename):
             try:
                 with open(filename, 'r', newline='') as csvfile:
+                    if int(list(csv.reader(csvfile))[-1][0]) == 0:
+                        return 1
                     return int(list(csv.reader(csvfile))[-1][0])
             except (IOError, IndexError):
                 return 0
@@ -94,16 +97,19 @@ class todo_list:
 #  d. After completing the task, the program goes back to the main menu
     def complete_task(self):
         try:
-            def delete_task(condition):
+            def delete_task(unique_id):
                 with open ('tasks.csv', 'r', newline='') as csvfile:
                     records = list(csv.reader(csvfile))
-                records = [record for record in records if not condition(record)]
+                
+                records = [record for record in records if record[0] !=str(unique_id)]
+
                 with open ('tasks.csv', 'w', newline='') as csvfile:
                     writer = csv.writer(csvfile)
                     writer.writerows(records)
-            def task_to_delete(record):
-                return record[0] == input('Enter the id of the task to complete: ')
-            delete_task(task_to_delete)
+                
+            input_id = int(input('Enter the id of the task you want to complete: '))
+            delete_task(input_id)
+            print('Task has been completed.')
             
         except Exception as e:
             print('An error occurred: ', e)
