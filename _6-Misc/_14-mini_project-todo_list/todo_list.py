@@ -1,11 +1,6 @@
 # TODO:
 #// main menu
 
-# 2. Add Task
-#  a. User enters task description and deadline
-#  b. Program generates a unique id for the task
-#  c. Store the task in a text file
-#  d. After adding the task, the program goes back to the main menu
 # 3. Complete task
 #  a. Show the list of all existing tasks
 #   i. If there are no tasks, show a message and go back to the main menu
@@ -15,6 +10,7 @@
 # 4. Exit
 
 import csv
+from pathlib import Path
 
 class todo_list:
     def __init__(self):
@@ -74,8 +70,32 @@ class todo_list:
 #//  b. each task shoud show: id, task description, deadline
 #//  c. After showing the list, the program goes back to the main menu
 
+# 2. Add Task
+#  a. User enters task description and deadline
+#  b. Program generates a unique id for the task
+#  c. Store the task in a text file
+#  d. After adding the task, the program goes back to the main menu
     def add_task(self):
-        print('inside add_task')
+        csv_file = 'tasks.csv'
+        def get_last_id(filename):
+            try:
+                with open(filename, 'r', newline='') as csvfile:
+                    return int(list(csv.reader(csvfile))[-1][0])
+            except (IOError, IndexError):
+                return 0
+        def add_entry_with_unique_id(filename):
+            last_id = get_last_id(filename)
+            new_id = last_id + 1
+            with open (filename, 'a', newline='') as csvfile:
+                writer = csv.writer(csvfile)
+                task = []
+                description = input('Enter task description: ')
+                deadline = input('Enter deadline: ')
+                task.append(description)
+                task.append(deadline)
+                writer.writerow([new_id] + task)
+        add_entry_with_unique_id(csv_file)
+        self.main_menu()
 
     def complete_task(self):
         print('inside complete_task')
@@ -83,7 +103,6 @@ class todo_list:
     def exit(self):
         print('Goodbye!')
         exit()
-
 
 def main():
     todo = todo_list()
