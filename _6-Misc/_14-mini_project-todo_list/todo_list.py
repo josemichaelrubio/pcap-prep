@@ -93,7 +93,24 @@ class todo_list:
 #  c. Remove the task from the list of the text file
 #  d. After completing the task, the program goes back to the main menu
     def complete_task(self):
-        print('inside complete_task')
+        try:
+            def delete_task(condition):
+                with open ('tasks.csv', 'r', newline='') as csvfile:
+                    records = list(csv.reader(csvfile))
+                records = [record for record in records if not condition(record)]
+                with open ('tasks.csv', 'w', newline='') as csvfile:
+                    writer = csv.writer(csvfile)
+                    writer.writerows(records)
+            def task_to_delete(record):
+                return record[0] == input('Enter the id of the task to complete: ')
+            delete_task(task_to_delete)
+            
+        except Exception as e:
+            print('An error occurred: ', e)
+            print('Exiting the program...')
+            exit()
+        finally:
+            self.main_menu()
 
 #*// 4. Exit
     def exit(self):
