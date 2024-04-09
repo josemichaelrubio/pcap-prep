@@ -57,12 +57,15 @@ class todo_list:
         finally:
             self.main_menu()
 # TODO   i. If there are no tasks, show a message and go back to the main menu
+#! AT THE MOMENT, THE PROGRAM DOES NOT SHOW A MESSAGE IF THERE ARE NO TASKS
 #//  b. each task shoud show: id, task description, deadline
 #//  c. After showing the list, the program goes back to the main menu
 
 #*// 2. Add Task
 #//  a. User enters task description and deadline
 #//  b. Program generates a unique id for the task
+#TODO i.if there are no tasks, the id should be 1
+#!  ATM, THE PROGRAKM CRASHES IF THERE ARE NO TASKS TO INCREMENT THE ID
 #//  c. Store the task in a text file
 #//  d. After adding the task, the program goes back to the main menu
     def add_task(self):
@@ -90,11 +93,12 @@ class todo_list:
         self.main_menu()
 
 #* 3. Complete task
-#  a. Show the list of all existing tasks
-#   i. If there are no tasks, show a message and go back to the main menu
-#  b. User enters the id of the task to complete
-#  c. Remove the task from the list of the text file
-#  d. After completing the task, the program goes back to the main menu
+#  TODO a. Show the list of all existing tasks
+#   TODO i. If there are no tasks, show a message and go back to the main menu
+#! AT THE MOMENT, THE PROGRAM DOES NOT SHOW A MESSAGE IF THERE ARE NO TASKS
+#//  b. User enters the id of the task to complete
+#//  c. Remove the task from the list of the text file
+#//  d. After completing the task, the program goes back to the main menu
     def complete_task(self):
         try:
             def delete_task(unique_id):
