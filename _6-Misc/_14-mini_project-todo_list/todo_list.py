@@ -43,11 +43,13 @@ class todo_list:
         try:
             stream = open('tasks.csv', 'r')
             csv_reader = csv.reader(stream)
-            next(csv_reader)
-            if csv_reader == None:
+            next(csv_reader, None)
+            rows = list(csv_reader)
+            print( len(rows) )
+            if len(rows) == 0:
                 print('No tasks to show.')
             else:
-                for row in stream:
+                for row in rows:
                     print(row)
             stream.close()
         except Exception as e:
@@ -92,10 +94,9 @@ class todo_list:
         add_entry_with_unique_id(csv_file)
         self.main_menu()
 
-#* 3. Complete task
-#  TODO a. Show the list of all existing tasks
-#   TODO i. If there are no tasks, show a message and go back to the main menu
-#! AT THE MOMENT, THE PROGRAM DOES NOT SHOW A MESSAGE IF THERE ARE NO TASKS
+#*// 3. Complete task
+#  //a. Show the list of all existing tasks
+#   //i. If there are no tasks, show a message and go back to the main menu
 #//  b. User enters the id of the task to complete
 #//  c. Remove the task from the list of the text file
 #//  d. After completing the task, the program goes back to the main menu
