@@ -58,16 +58,14 @@ class todo_list:
             exit()
         finally:
             self.main_menu()
-# TODO   i. If there are no tasks, show a message and go back to the main menu
-#! AT THE MOMENT, THE PROGRAM DOES NOT SHOW A MESSAGE IF THERE ARE NO TASKS
+#//   i. If there are no tasks, show a message and go back to the main menu
 #//  b. each task shoud show: id, task description, deadline
 #//  c. After showing the list, the program goes back to the main menu
 
 #*// 2. Add Task
 #//  a. User enters task description and deadline
 #//  b. Program generates a unique id for the task
-#TODO i.if there are no tasks, the id should be 1
-#!  ATM, THE PROGRAKM CRASHES IF THERE ARE NO TASKS TO INCREMENT THE ID
+#// i.if there are no tasks, the id should be 1
 #//  c. Store the task in a text file
 #//  d. After adding the task, the program goes back to the main menu
     def add_task(self):
@@ -75,11 +73,14 @@ class todo_list:
         def get_last_id(filename):
             try:
                 with open(filename, 'r', newline='') as csvfile:
-                    if int(list(csv.reader(csvfile))[-1][0]) == 0:
-                        return 1
-                    return int(list(csv.reader(csvfile))[-1][0])
-            except (IOError, IndexError):
+                    rows = list(csv.reader(csvfile))
+                    if not rows or int(rows[-1][0]) == 'id':
+                        return 0
+                    return int(rows[-1][0])
+            except Exception as e:
+                print(e)
                 return 0
+                
         def add_entry_with_unique_id(filename):
             last_id = get_last_id(filename)
             new_id = last_id + 1
