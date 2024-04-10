@@ -4,7 +4,6 @@ class todo_list:
     def __init__(self):
         self.tasks = []
 
-#*// main menu
     def main_menu(self):
 
         try:
@@ -38,8 +37,7 @@ class todo_list:
 
     def show_tasks(self):
         print('1. == TASKS ==')
-#* 1. Show Tasks
-#//  a. current to-do list with all the tasks loaded from a text file
+
         try:
             stream = open('tasks.csv', 'r')
             csv_reader = csv.reader(stream)
@@ -58,16 +56,7 @@ class todo_list:
             exit()
         finally:
             self.main_menu()
-#//   i. If there are no tasks, show a message and go back to the main menu
-#//  b. each task shoud show: id, task description, deadline
-#//  c. After showing the list, the program goes back to the main menu
 
-#*// 2. Add Task
-#//  a. User enters task description and deadline
-#//  b. Program generates a unique id for the task
-#// i.if there are no tasks, the id should be 1
-#//  c. Store the task in a text file
-#//  d. After adding the task, the program goes back to the main menu
     def add_task(self):
         csv_file = 'tasks.csv'
         def get_last_id(filename):
@@ -95,12 +84,6 @@ class todo_list:
         add_entry_with_unique_id(csv_file)
         self.main_menu()
 
-#*// 3. Complete task
-#  //a. Show the list of all existing tasks
-#   //i. If there are no tasks, show a message and go back to the main menu
-#//  b. User enters the id of the task to complete
-#//  c. Remove the task from the list of the text file
-#//  d. After completing the task, the program goes back to the main menu
     def complete_task(self):
         try:
             def delete_task(unique_id):
@@ -124,7 +107,6 @@ class todo_list:
         finally:
             self.main_menu()
 
-#*// 4. Exit
     def exit(self):
         print('Goodbye!')
         exit()
